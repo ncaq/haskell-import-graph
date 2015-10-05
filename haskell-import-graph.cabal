@@ -1,13 +1,17 @@
 name:                haskell-import-graph
-version:             0.1.0.0
+version:             1.0.0
 synopsis:            create haskell import graph for graphviz
 description:         {
 create haskell import graph for graphviz
-How to:
+how to:
+.
 > cabal build
 > haskell-import-graph
-Or,
+.
+or
+.
 > haskell-import-graph dist/build/foo/foo-tmp/bar.hi
+.
 }
 license:             MIT
 license-file:        LICENSE
