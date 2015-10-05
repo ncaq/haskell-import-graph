@@ -1,11 +1,22 @@
+*.aux
+*.chi
+*.chs.h
+*.dyn_hi
+*.dyn_o
 *.hi
+*.hp
 *.o
+*.prof
 
 .cabal-sandbox/
 .stack-work/
+cabal-dev/
 dist/
 
 .DS_Store
+.hpc
+.hsenv
+.virtualenv
 GPATH
 GRTAGS
 GTAGS
