@@ -1,0 +1,12 @@
+*.hi
+*.o
+
+.cabal-sandbox/
+.stack-work/
+dist/
+
+.DS_Store
+GPATH
+GRTAGS
+GTAGS
+cabal.sandbox.config
