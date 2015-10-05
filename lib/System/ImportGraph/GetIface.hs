@@ -1,4 +1,4 @@
-module GetIface where
+module System.ImportGraph.GetIface where
 import           BinIface
 import           ClassyPrelude
 import           GHC

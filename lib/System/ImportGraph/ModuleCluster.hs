@@ -1,19 +1,13 @@
-module ImportGraph where
+module System.ImportGraph.ModuleCluster where
 import           Avail
 import           ClassyPrelude
 import           Data.GraphViz
 import           Data.GraphViz.Attributes.Complete
-import qualified Data.GraphViz.Types.Generalised   as G
 import           Data.GraphViz.Types.Monadic
 import qualified Data.Text.Lazy                    as L
 import           HscTypes
 import           Module
 import           Name
-
-importGraph :: GraphID -> [ModIface] -> G.DotGraph L.Text
-importGraph graphName mods = digraph graphName $ do
-    graphAttrs [Compound True, RankDir FromLeft]
-    mapM moduleCluster mods
 
 moduleCluster :: ModIface -> Dot L.Text
 moduleCluster iface@ModIface{..} = do
