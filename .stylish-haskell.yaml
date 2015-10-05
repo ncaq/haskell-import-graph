@@ -1,0 +1,17 @@
+steps:
+  - imports:
+      align: global
+  - language_pragmas:
+      style: vertical
+      remove_redundant: true
+  - records: {}
+  - tabs:
+      spaces: 8
+  - trailing_whitespace: {}
+columns: 160
+language_extensions:
+  - NamedFieldPuns
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - RecordWildCards
+  - StandaloneDeriving
