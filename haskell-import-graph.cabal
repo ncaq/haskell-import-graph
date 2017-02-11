@@ -1,5 +1,5 @@
 name:                haskell-import-graph
-version:             1.0.0
+version:             1.0.1
 synopsis:            create haskell import graph for graphviz
 description:         {
 create haskell import graph for graphviz
@@ -32,24 +32,24 @@ library
                      , System.ImportGraph.GetIface
                      , System.ImportGraph.ModuleCluster
 
-  ghc-options:         -Wall -fwarn-incomplete-uni-patterns -fwarn-monomorphism-restriction -fwarn-identities
+  ghc-options:         -Wall
   default-language:    Haskell2010
   default-extensions:  NamedFieldPuns
                        NoImplicitPrelude
                        OverloadedStrings
                        RecordWildCards
 
-  build-depends:       base                   >= 4.8   && < 4.9
-                     , classy-prelude         >= 0.12  && < 0.13
-                     , ghc                    >= 7.10  && < 7.11
-                     , graphviz               >= 2999  && < 3000
-                     , process                >= 1.2   && < 1.3
-                     , text                   >= 1.2   && < 1.3
-                     , transformers           >= 0.4   && < 0.5
+  build-depends:       base                   >= 4.8   && < 5
+                     , classy-prelude         >= 0.12
+                     , ghc                    >= 7.10
+                     , graphviz               >= 2999
+                     , process                >= 1.2
+                     , text                   >= 1.2
+                     , transformers           >= 0.4
 
 executable haskell-import-graph
   hs-source-dirs:      exec
   main-is:             Main.hs
-  ghc-options:         -Wall -fwarn-incomplete-uni-patterns -fwarn-monomorphism-restriction -fwarn-identities
+  ghc-options:         -Wall
   default-language:    Haskell2010
   build-depends:       base, haskell-import-graph
