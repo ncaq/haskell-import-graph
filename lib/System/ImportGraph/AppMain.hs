@@ -32,8 +32,8 @@ getLibDirReadProcess :: IO (Maybe FilePath)
 getLibDirReadProcess = listToMaybe . lines <$> readProcess "ghc" ["--print-libdir"] ""
 
 help :: L.Text
-help = unlines [ "Usage: cabal build && haskell-import-graph"
-               , "or:    cabal build && haskell-import-graph dist/build/foo/foo-tmp/bar.hi"
+help = unlines [ "Usage: haskell-import-graph"
+               , "or:    haskell-import-graph .stack-work/dist/x86_64-linux/Cabal-1.24.2.0/build/haskell-import-graph/haskell-import-graph-tmp/Main.hi"
                ]
 
 renderGraph :: [ModIface] -> L.Text

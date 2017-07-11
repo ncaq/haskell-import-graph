@@ -1,0 +1,35 @@
+name: haskell-import-graph
+version: '1.0.2'
+synopsis: create haskell import graph for graphviz
+category: Development
+author: ncaq
+maintainer: ncaq@ncaq.net
+copyright: © ncaq
+license: MIT
+github: ncaq/haskell-import-graph.git
+
+library:
+  source-dirs: lib
+  default-extensions:
+  - NamedFieldPuns
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - RecordWildCards
+  ghc-options: -Wall
+  dependencies:
+  - base >= 4.8 && < 5
+  - classy-prelude
+  - ghc
+  - graphviz
+  - process
+  - text
+  - transformers
+
+executables:
+  haskell-import-graph:
+    main: Main.hs
+    source-dirs: exec
+    ghc-options: -Wall
+    dependencies:
+    - base
+    - haskell-import-graph
