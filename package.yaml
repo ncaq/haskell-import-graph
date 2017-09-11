@@ -1,12 +1,12 @@
 name: haskell-import-graph
-version: '1.0.2'
+version: 1.0.3
 synopsis: create haskell import graph for graphviz
 category: Development
 author: ncaq
 maintainer: ncaq@ncaq.net
 copyright: © ncaq
 license: MIT
-github: ncaq/haskell-import-graph.git
+github: ncaq/haskell-import-graph
 
 library:
   source-dirs: lib
