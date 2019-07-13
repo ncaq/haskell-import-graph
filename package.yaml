@@ -27,12 +27,6 @@ ghc-options:
   - -Wcompat
   - -O2
 
-default-extensions:
-  - NamedFieldPuns
-  - NoImplicitPrelude
-  - OverloadedStrings
-  - RecordWildCards
-
 library:
   source-dirs: lib
   dependencies:
