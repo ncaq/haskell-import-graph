@@ -8,28 +8,50 @@ copyright: © ncaq
 license: MIT
 github: ncaq/haskell-import-graph
 
-library:
-  source-dirs: lib
-  default-extensions:
+ghc-options:
+  - -Wall
+  # - -Wall-missed-specialisations
+  - -Widentities
+  # - -Wimplicit-prelude
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  # - -Wmissed-specialisations
+  # - -Wmissing-export-lists
+  - -Wmissing-exported-signatures
+  - -Wmissing-home-modules
+  # - -Wmissing-import-lists
+  # - -Wmissing-local-signatures
+  # - -Wmonomorphism-restriction
+  # - -Wpartial-fields
+  - -Wredundant-constraints
+  - -Wcompat
+  - -O2
+
+default-extensions:
   - NamedFieldPuns
   - NoImplicitPrelude
   - OverloadedStrings
   - RecordWildCards
-  ghc-options: -Wall
+
+library:
+  source-dirs: lib
   dependencies:
-  - base >= 4.8 && < 5
-  - classy-prelude
-  - ghc
-  - graphviz
-  - process
-  - text
-  - transformers
+    - base >= 4.8 && < 5
+    - classy-prelude
+    - ghc
+    - graphviz
+    - process
+    - text
+    - transformers
 
 executables:
   haskell-import-graph:
     main: Main.hs
     source-dirs: exec
-    ghc-options: -Wall
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
-    - base
-    - haskell-import-graph
+      - base
+      - haskell-import-graph
