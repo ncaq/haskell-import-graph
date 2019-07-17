@@ -3,6 +3,6 @@
 create haskell import graph for graphviz
 
 ~~~
-% stack build
+% stack install
 % haskell-import-graph
 ~~~
